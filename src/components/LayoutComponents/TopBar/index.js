@@ -24,7 +24,7 @@ class TopBar extends React.Component {
             rel="noopener noreferrer"
             className="mr-4 d-none d-sm-inline"
           >
-            <Button type="danger">Buy Now 25$</Button>
+            {/* <Button type="danger">Buy Now 25$</Button> */}
           </a>
           <BitcoinPrice />
           <HomeMenu />
