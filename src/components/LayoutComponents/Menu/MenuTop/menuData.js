@@ -73,32 +73,32 @@ export default [
   },
   {
     title: 'Danh Mục',
-    key: 'menu',
-    url: '/menu',
+    key: 'list',
+    url: '/list',
     icon: 'icmn icmn-list2',
     sub: [
       {
         title: 'Danh Mục Sản Phẩm',
         key: 'product',
-        url: '/menu/product',
+        url: '/list/product',
         icon: 'icmn icmn-forward3',
         sub2: [
           {
             title: 'Danh Mục Chủ',
             key: 'first',
-            url: '/menu/product/first',
+            url: '/list/product/first',
             icon: '',
           },
           {
             title: 'Danh Mục Cha',
             key: 'second',
-            url: '/menu/product/second',
+            url: '/list/product/second',
             icon: '',
           },
           {
             title: 'Danh Mục',
             key: 'third',
-            url: '/menu/product/third',
+            url: '/list/product/third',
             icon: '',
           },
         ]
@@ -106,25 +106,25 @@ export default [
       {
         title: 'Thuộc Tính Sản Phẩm',
         key: 'properties',
-        url: '/menu/properties',
+        url: '/list/properties',
         icon: 'icmn icmn-forward3',
         sub2: [
           {
             title: 'Tạo Mới',
             key: 'new',
-            url: '/menu/properties/new',
+            url: '/list/properties/new',
             icon: '',
           },
           {
             title: 'Đang Hoạt Động',
             key: 'active',
-            url: '/menu/properties/active',
+            url: '/list/properties/active',
             icon: '',
           },
           {
             title: 'Không Hoạt Động',
             key: 'deactive',
-            url: '/menu/properties/deactive',
+            url: '/list/properties/deactive',
             icon: '',
           },
         ]
@@ -132,25 +132,25 @@ export default [
       {
         title: 'Quy Cách Đóng Gói',
         key: 'Process',
-        url: '/menu/process',
+        url: '/list/process',
         icon: 'icmn icmn-forward3',
         sub2: [
           {
             title: 'Loại Thùng',
             key: 'type',
-            url: '/menu/process/new',
+            url: '/list/process/new',
             icon: '',
           },
           {
             title: 'Kích Thước Thùng',
             key: 'size',
-            url: '/menu/process/size',
+            url: '/list/process/size',
             icon: '',
           },
           {
             title: 'Đơn Vị Tính',
             key: 'unit',
-            url: '/menu/process/unit',
+            url: '/list/process/unit',
             icon: '',
           },
         ]
