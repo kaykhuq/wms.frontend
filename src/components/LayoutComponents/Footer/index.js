@@ -36,7 +36,7 @@ class AppFooter extends React.Component {
                 rel="noopener noreferrer"
                 className="mr-4"
               >
-                <Button type="primary">Buy Now 25$</Button>
+                {/* <Button type="primary">Buy Now 25$</Button> */}
               </a>
             </div>
             <div className="col-sm-6">
