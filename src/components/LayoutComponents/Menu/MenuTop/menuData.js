@@ -686,4 +686,30 @@ export default [
       },
     ]
   },
+  {
+    title: 'Báo Cáo',
+    key: 'report',
+    url: '/report',
+    icon: 'icmn icmn-paste',
+    children: [
+      {
+        title: 'Báo Cáo Sản Phẩm',
+        key: 'productsReport',
+        url: '/report/products',
+        icon: '',
+      },
+      {
+        title: 'Báo Cáo Bán Hàng',
+        key: 'saleReport',
+        url: '/report/sale',
+        icon: '',
+      },
+      {
+        title: 'Báo Cáo Kho',
+        key: 'warehouseReport',
+        url: '/report/warehouse',
+        icon: '',
+      },
+    ]
+  },
 ]
