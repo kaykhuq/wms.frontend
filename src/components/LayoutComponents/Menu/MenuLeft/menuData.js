@@ -61,8 +61,8 @@ export default [
         key: 'saleCancel',
         url: '/sale/cancel',
         icon: '',
-      }, 
-    ]
+      },
+    ],
   },
   {
     title: 'Khách Hàng',
@@ -88,7 +88,7 @@ export default [
         url: '/customer/deactive',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Nhà Cung Cấp',
@@ -114,7 +114,7 @@ export default [
         url: '/supplier/deactive',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Sản Phẩm',
@@ -176,9 +176,9 @@ export default [
             url: '/product/brand/list',
             icon: '',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Thông Báo Hàng Đến',
@@ -210,7 +210,7 @@ export default [
         url: '/arrival-notification/temp',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Yêu Cầu Nhập Hàng',
@@ -254,7 +254,7 @@ export default [
         url: '/import-requirement/temp',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Nhập Xuất Hàng Hóa',
@@ -292,7 +292,7 @@ export default [
             url: '/export/import-record/temp',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Phiếu Xuất Kho',
@@ -324,7 +324,7 @@ export default [
             url: '/export/export-record/temp',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Hướng Dẫn Lấy Hàng',
@@ -350,7 +350,7 @@ export default [
             url: '/export/get-guide/complete',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Hướng Dẫn Đưa Hàng Vào Kho',
@@ -376,7 +376,7 @@ export default [
             url: '/export/put-guide/complete',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Chuyển Kho Nội Bộ',
@@ -408,9 +408,9 @@ export default [
             url: '/export/change-store/temp',
             icon: '',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Phiếu Kiểm Kho',
@@ -442,7 +442,7 @@ export default [
         url: '/inventory-records/temp',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Nhà Kho',
@@ -474,7 +474,7 @@ export default [
         url: '/warehouse/shelf',
         icon: '',
       },
-    ]
+    ],
   },
   {
     title: 'Nhân Sự',
@@ -518,7 +518,7 @@ export default [
             url: '/employees/staff/create',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Phòng Ban',
@@ -538,7 +538,7 @@ export default [
             url: '/employees/department/position',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Xe Tải',
@@ -564,9 +564,9 @@ export default [
             url: '/employees/trucks/create',
             icon: '',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Danh Mục',
@@ -624,7 +624,7 @@ export default [
             url: '/list/properties/deactive',
             icon: '',
           },
-        ]
+        ],
       },
       {
         title: 'Quy Cách Đóng Gói',
@@ -650,9 +650,9 @@ export default [
             url: '/list/process/unit',
             icon: '',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Cấu Hình',
@@ -714,9 +714,9 @@ export default [
             url: '/setting/address/district',
             icon: '',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   {
     title: 'Báo Cáo',
@@ -742,6 +742,6 @@ export default [
         url: '/report/warehouse',
         icon: '',
       },
-    ]
+    ],
   },
 ]
