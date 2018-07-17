@@ -1,11 +1,11 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import StaffActive from './StaffActive'
+import SupplierDeactive from './SupplierDeactive';
 
-class EmployeesStaffActive extends React.Component {
+class SupplierDeactivePage extends React.Component {
   static defaultProps = {
-    pathName: 'Staff Active Page',
+    pathName: 'Supplier Deactive Page',
     roles: ['agent', 'administrator'],
   }
 
@@ -13,11 +13,11 @@ class EmployeesStaffActive extends React.Component {
     const props = this.props
     return (
       <Page {...props}>
-        <Helmet title="Staff Active Page" />
-        <StaffActive />
+        <Helmet title="Supplier Deactive Page" />
+        <SupplierDeactive />
       </Page>
     )
   }
 }
 
-export default EmployeesStaffActive
+export default SupplierDeactivePage
