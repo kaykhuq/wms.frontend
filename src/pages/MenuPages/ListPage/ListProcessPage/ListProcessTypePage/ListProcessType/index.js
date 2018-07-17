@@ -14,9 +14,7 @@ class ListProcessType extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list process type page
-          </p>
+          <p>this is list process type page</p>
         </div>
       </section>
     )

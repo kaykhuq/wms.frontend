@@ -14,9 +14,7 @@ class CustomerDeactive extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is Customer Deactive page
-          </p>
+          <p>this is Customer Deactive page</p>
         </div>
       </section>
     )

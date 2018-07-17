@@ -14,9 +14,7 @@ class CustomerActive extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is Customer Active page
-          </p>
+          <p>this is Customer Active page</p>
         </div>
       </section>
     )

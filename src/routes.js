@@ -33,64 +33,74 @@ const loadableRoutes = {
     component: loadable(() => import('pages/Dashboard/DashboardAlphaPage')),
   },
 
-
   // Menu Pages
 
   // Menu Khach Hang
   '/customer/create': {
-    component: loadable(()=> import('pages/MenuPages/CustomerPage/CustomerCreatePage'))
+    component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerCreatePage')),
   },
   '/customer/active': {
-    component: loadable(()=> import('pages/MenuPages/CustomerPage/CustomerActivePage'))
+    component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerActivePage')),
   },
   '/customer/deactive': {
-    component: loadable(()=> import('pages/MenuPages/CustomerPage/CustomerActivePage'))
+    component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerActivePage')),
   },
 
   // Menu Nha Cung Cap
   '/supplier/create': {
-    component: loadable(()=> import('pages/MenuPages/SupplierPage/SupplierCreatePage'))
+    component: loadable(() => import('pages/MenuPages/SupplierPage/SupplierCreatePage')),
   },
   '/supplier/active': {
-    component: loadable(()=> import('pages/MenuPages/SupplierPage/SupplierActivePage'))
+    component: loadable(() => import('pages/MenuPages/SupplierPage/SupplierActivePage')),
   },
   '/supplier/deactive': {
-    component: loadable(()=> import('pages/MenuPages/SupplierPage/SupplierDeactivePage'))
+    component: loadable(() => import('pages/MenuPages/SupplierPage/SupplierDeactivePage')),
   },
-
 
   // Menu Danh Muc
-      // Danh Mục Sản Phẩm
+  // Danh Mục Sản Phẩm
   '/list/products/first': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProductPage/ListFirstPage'))
+    component: loadable(() => import('pages/MenuPages/ListPage/ListProductPage/ListFirstPage')),
   },
   '/list/products/second': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProductPage/ListSecondPage'))
+    component: loadable(() => import('pages/MenuPages/ListPage/ListProductPage/ListSecondPage')),
   },
   '/list/products/third': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProductPage/ListThirdPage'))
+    component: loadable(() => import('pages/MenuPages/ListPage/ListProductPage/ListThirdPage')),
   },
 
-      // Thuộc Tính Sản Phẩm
+  // Thuộc Tính Sản Phẩm
   '/list/properties/create': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesCreatePage'))
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesCreatePage'),
+    ),
   },
   '/list/properties/active': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesActivePage'))
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesActivePage'),
+    ),
   },
   '/list/properties/deactive': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesDeactivePage'))
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListPropertiesPage/ListPropertiesDeactivePage'),
+    ),
   },
-      // Quy Cách Đóng Gói
+  // Quy Cách Đóng Gói
   '/list/process/type': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProcessPage/ListProcessTypePage'))
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListProcessPage/ListProcessTypePage'),
+    ),
   },
   '/list/process/size': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProcessPage/ListProcessSizePage'))
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListProcessPage/ListProcessSizePage'),
+    ),
   },
   '/list/process/unit': {
-    component: loadable(()=> import('pages/MenuPages/ListPage/ListProcessPage/ListProcessUnitPage'))
-  }
+    component: loadable(() =>
+      import('pages/MenuPages/ListPage/ListProcessPage/ListProcessUnitPage'),
+    ),
+  },
 }
 
 class Routes extends React.Component {

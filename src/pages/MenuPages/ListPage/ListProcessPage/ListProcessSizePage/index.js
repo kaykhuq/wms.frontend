@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListProcessSize from './ListProcessSize';
+import ListProcessSize from './ListProcessSize'
 
 class ListProcessSizePage extends React.Component {
   static defaultProps = {

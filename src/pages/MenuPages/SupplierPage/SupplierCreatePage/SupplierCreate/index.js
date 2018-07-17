@@ -14,9 +14,7 @@ class SupplierCreate extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is supplier create page
-          </p>
+          <p>this is supplier create page</p>
         </div>
       </section>
     )

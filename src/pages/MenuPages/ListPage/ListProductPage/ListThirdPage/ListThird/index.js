@@ -14,9 +14,7 @@ class ListThird extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list third page
-          </p>
+          <p>this is list third page</p>
         </div>
       </section>
     )

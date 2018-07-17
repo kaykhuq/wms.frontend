@@ -14,9 +14,7 @@ class CustomerCreate extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is Customer create page
-          </p>
+          <p>this is Customer create page</p>
         </div>
       </section>
     )

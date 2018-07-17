@@ -14,9 +14,7 @@ class ListProcessUnit extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list process Unit page
-          </p>
+          <p>this is list process Unit page</p>
         </div>
       </section>
     )

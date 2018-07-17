@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListFirst from './ListFirst';
+import ListFirst from './ListFirst'
 
 class ListFirstPage extends React.Component {
   static defaultProps = {
