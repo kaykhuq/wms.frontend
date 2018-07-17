@@ -14,9 +14,7 @@ class ListProcessSize extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list process size page
-          </p>
+          <p>this is list process size page</p>
         </div>
       </section>
     )

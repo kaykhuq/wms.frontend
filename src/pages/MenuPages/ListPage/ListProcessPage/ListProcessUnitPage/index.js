@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListProcessUnit from './ListProcessUnit';
+import ListProcessUnit from './ListProcessUnit'
 
 class ListProcessUnitPage extends React.Component {
   static defaultProps = {
@@ -12,7 +12,7 @@ class ListProcessUnitPage extends React.Component {
   render() {
     const props = this.props
     return (
-      <Page {...props}> 
+      <Page {...props}>
         <Helmet title="List Process Unit Page" />
         <ListProcessUnit />
       </Page>

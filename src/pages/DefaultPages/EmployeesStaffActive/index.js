@@ -1,11 +1,11 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListProcessSize from './ListProcessSize'
+import StaffActive from './StaffActive'
 
-class ListProcessSizePage extends React.Component {
+class EmployeesStaffActive extends React.Component {
   static defaultProps = {
-    pathName: 'List Process Size Page',
+    pathName: 'Staff Active Page',
     roles: ['agent', 'administrator'],
   }
 
@@ -13,11 +13,11 @@ class ListProcessSizePage extends React.Component {
     const props = this.props
     return (
       <Page {...props}>
-        <Helmet title="List Process Size Page" />
-        <ListProcessSize />
+        <Helmet title="Staff Active Page" />
+        <StaffActive />
       </Page>
     )
   }
 }
 
-export default ListProcessSizePage
+export default EmployeesStaffActive

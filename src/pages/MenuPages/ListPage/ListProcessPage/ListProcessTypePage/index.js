@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListProcessType from './ListProcessType';
+import ListProcessType from './ListProcessType'
 
 class ListProcessTypePage extends React.Component {
   static defaultProps = {

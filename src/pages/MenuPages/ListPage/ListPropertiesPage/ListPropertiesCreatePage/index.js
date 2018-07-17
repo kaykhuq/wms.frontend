@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListPropertiesCreate from './ListPropertiesCreate';
+import ListPropertiesCreate from './ListPropertiesCreate'
 
 class ListPropertiesCreatePage extends React.Component {
   static defaultProps = {

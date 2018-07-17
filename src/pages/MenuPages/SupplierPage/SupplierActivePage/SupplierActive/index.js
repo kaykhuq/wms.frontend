@@ -14,9 +14,7 @@ class SupplierActive extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is supplier Active page
-          </p>
+          <p>this is supplier Active page</p>
         </div>
       </section>
     )

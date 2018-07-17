@@ -14,9 +14,7 @@ class ListFirst extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list first page
-          </p>
+          <p>this is list first page</p>
         </div>
       </section>
     )

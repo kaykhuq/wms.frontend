@@ -14,9 +14,7 @@ class ListSecond extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is list second page
-          </p>
+          <p>this is list second page</p>
         </div>
       </section>
     )

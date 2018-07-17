@@ -14,9 +14,7 @@ class ListPropertiesCreate extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is List Properties Create page
-          </p>
+          <p>this is List Properties Create page</p>
         </div>
       </section>
     )

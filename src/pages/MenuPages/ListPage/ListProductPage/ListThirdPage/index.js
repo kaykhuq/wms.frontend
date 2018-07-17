@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import ListThird from './ListThird';
+import ListThird from './ListThird'
 
 class ListThirdPage extends React.Component {
   static defaultProps = {
