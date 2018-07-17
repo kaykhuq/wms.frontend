@@ -487,6 +487,38 @@ export default [
         key: 'staff',
         url: '/employees/staff',
         icon: '',
+        children: [
+          {
+            title: 'Đang Hoạt Động',
+            key: 'staff-active',
+            url: '/employees/staff/active',
+            icon: '',
+          },
+          {
+            title: 'Không Hoạt Động',
+            key: 'staff-inactive',
+            url: '/employees/staff/inactive',
+            icon: '',
+          },
+          {
+            title: 'Tài khoản ',
+            key: 'staff-account',
+            url: '/employees/staff/account',
+            icon: '',
+          },
+          {
+            title: 'Vai trò  ',
+            key: 'staff-role',
+            url: '/employees/staff/role',
+            icon: '',
+          },
+          {
+            title: 'Tạo Mới ',
+            key: 'staff-create',
+            url: '/employees/staff/create',
+            icon: '',
+          },
+        ]
       },
       {
         title: 'Phòng Ban',

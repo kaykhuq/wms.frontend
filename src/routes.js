@@ -21,7 +21,12 @@ const loadableRoutes = {
   '/empty': {
     component: loadable(() => import('pages/DefaultPages/EmptyPage')),
   },
-
+  '/empty': {
+    component: loadable(() => import('pages/DefaultPages/EmptyPage')),
+  },
+  '/employees/staff/active': {
+    component: loadable(() => import('pages/DefaultPages/EmployeesStaffActive')),
+  },
 
   // Dashboards
   '/dashboard/alpha': {
