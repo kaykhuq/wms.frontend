@@ -6,7 +6,7 @@ class AppFooter extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div className="footer__top">
+        {/*<div className="footer__top">
           <div className="row">
             <div className="col-lg-9">
               <p>
@@ -26,7 +26,7 @@ class AppFooter extends React.Component {
               </p>
             </div>
           </div>
-        </div>
+        </div>*/}
         <div className="footer__bottom">
           <div className="row">
             <div className="col-sm-6">

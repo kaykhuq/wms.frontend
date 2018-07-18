@@ -503,13 +503,13 @@ export default [
           {
             title: 'Tài khoản ',
             key: 'staff-account',
-            url: '/employees/staff/account',
+            url: '/employees/staff/accounts',
             icon: '',
           },
           {
             title: 'Vai trò  ',
             key: 'staff-role',
-            url: '/employees/staff/role',
+            url: '/employees/staff/roles',
             icon: '',
           },
           {
