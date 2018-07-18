@@ -1,0 +1,43 @@
+@import '../../../../resources/mixins';
+
+label{
+	margin-right: 10px;
+}
+.staff-header{
+	width: 100%;
+	border: 1px solid #e8e8e8;
+}
+.staff-header div{
+	display: inline-block;
+	
+}
+.staff__title .staff__title_container{
+	border-right: 1px solid #e8e8e8;
+	padding: 10px 10px;
+}
+.staff__title strong{
+	padding: 10px 10px;
+	margin-left: 10px;
+}
+.staff-header-btn{
+	padding: 5px 10px;
+	border: 1px solid #e8e8e8;
+	margin-left: 10px;
+}
+.staff-tool{
+	margin-top: 20px;
+	width: 100%;
+}
+.staff-tool div{
+	display: inline-block;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.middle{
+	width: 30%;
+	margin-left: 35%;
+}
