@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import SupplierCreate from './SupplierCreate';
+import SupplierCreate from './SupplierCreate'
 
 class SupplierCreatePage extends React.Component {
   static defaultProps = {

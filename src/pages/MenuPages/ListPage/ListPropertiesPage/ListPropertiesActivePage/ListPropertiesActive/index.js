@@ -14,9 +14,7 @@ class ListPropertiesActive extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is List Properties Active page
-          </p>
+          <p>this is List Properties Active page</p>
         </div>
       </section>
     )

@@ -14,9 +14,7 @@ class ListPropertiesDeactive extends React.Component {
           </div>
         </div>
         <div className="card-body">
-          <p>
-            this is List Properties Deactive page
-          </p>
+          <p>this is List Properties Deactive page</p>
         </div>
       </section>
     )

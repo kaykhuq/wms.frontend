@@ -32,18 +32,19 @@ class Login extends React.Component {
             <div className="col-xl-12">
               <div className="main-login__block__promo text-black text-center">
                 <h1 className="mb-3 text-black">
-                  <strong>WELCOME TO CLEAN UI ADMIN TEMPLATE</strong>
+                  {/*<strong>WELCOME TO CLEAN UI ADMIN TEMPLATE</strong>*/}
+                  Warehouse Management System
                 </h1>
-                <p>
+                {/*<p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                   Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
+                </p>*/}
               </div>
               <div className="main-login__block__inner">
                 <div className="main-login__block__form">
                   <LoginForm email={this.state.restoredEmail} />
                 </div>
-                <div className="main-login__block__sidebar">
+                {/*<div className="main-login__block__sidebar">
                   <h4 className="main-login__block__sidebar__title text-white">
                     <strong>Agile Dev Meetup</strong>
                     <br />
@@ -60,7 +61,7 @@ class Login extends React.Component {
                     <i className="icmn-location mr-3" />
                     New York, USA
                   </div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>

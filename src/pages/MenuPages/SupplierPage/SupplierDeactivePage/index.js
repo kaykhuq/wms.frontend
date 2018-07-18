@@ -1,7 +1,7 @@
 import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
-import SupplierDeactive from './SupplierDeactive';
+import SupplierDeactive from './SupplierDeactive'
 
 class SupplierDeactivePage extends React.Component {
   static defaultProps = {
