@@ -21,8 +21,21 @@ const loadableRoutes = {
   '/empty': {
     component: loadable(() => import('pages/DefaultPages/EmptyPage')),
   },
+  // Nhan vien
   '/employees/staff/active': {
     component: loadable(() => import('pages/DefaultPages/EmployeesStaffActive')),
+  },
+  '/employees/staff/inactive': {
+    component: loadable(() => import('pages/DefaultPages/EmployeesStaffInactive')),
+  },
+  '/employees/staff/accounts': {
+    component: loadable(() => import('pages/DefaultPages/EmployeesStaffAccounts')),
+  },
+  '/employees/staff/roles': {
+    component: loadable(() => import('pages/DefaultPages/EmployeesStaffRoles')),
+  },
+  '/employees/staff/create': {
+    component: loadable(() => import('pages/DefaultPages/EmployeesStaffCreate')),
   },
 
   // Dashboards

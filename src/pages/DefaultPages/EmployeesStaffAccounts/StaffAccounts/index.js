@@ -6,7 +6,7 @@ import './style.scss'
 
 const Panel = Collapse.Panel
 
-class StaffActive extends React.Component {
+class StaffAccounts extends React.Component {
   render() {
     return (
       <section className="staff-active">
@@ -15,7 +15,7 @@ class StaffActive extends React.Component {
             <div className="staff__title_container">
               <icon className="icmn icmn-user-check" />
             </div>
-            <strong>Danh Sách Nhân Viên Đang Hoạt Động</strong>
+            <strong>Danh Sách Tài Khoản</strong>
           </div>
 
           <div className="staff-header-btn btn">
@@ -52,4 +52,4 @@ class StaffActive extends React.Component {
   }
 }
 
-export default StaffActive
+export default StaffAccounts
