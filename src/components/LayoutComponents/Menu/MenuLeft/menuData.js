@@ -554,8 +554,8 @@ export default [
           },
           {
             title: 'Không Hoạt Động',
-            key: 'trucksDeactive',
-            url: '/employees/trucks/deactive',
+            key: 'trucksInactive',
+            url: '/employees/trucks/inactive',
             icon: '',
           },
           {
