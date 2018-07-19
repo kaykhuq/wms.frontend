@@ -433,7 +433,7 @@ export default [
           },
         ],
       },
-      {
+      { 
         title: 'Xe Tải',
         key: 'trucks',
         url: '/employees/trucks',
@@ -445,8 +445,8 @@ export default [
           },
           {
             title: 'Không Hoạt Động',
-            key: 'trucksDeactive',
-            url: '/employees/trucks/deactive',
+            key: 'trucksInactive',
+            url: '/employees/trucks/inactive',
           },
           {
             title: 'Tạo Mới',

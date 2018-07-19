@@ -36,6 +36,8 @@
     "prop-types": "^15.5.10",
     "rc-drawer": "^1.4.4",
     "react": "^16.4.0",
+    "react-ckeditor": "^0.0.1",
+    "react-ckeditor-component": "^1.0.7",
     "react-container-query": "^0.11.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.4.0",
