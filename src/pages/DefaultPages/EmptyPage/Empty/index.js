@@ -6,6 +6,7 @@ const Panel = Collapse.Panel
 
 class Empty extends React.Component {
   render() {
+    console.log('empty page');
     return (
       <section className="card">
         <div className="card-header">

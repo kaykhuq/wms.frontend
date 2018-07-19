@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { Button, Input, Icon, Table } from 'antd'
-import { tableData } from './data.json'
 
 const columns = [{
     title: 'Name',
     dataIndex: 'name',
     sorter: true,
-    render: name => `${name.first} ${name.last}`,
+    render: name => `${name}`,
     width: '20%',
 }, {
-    title: 'Gender',
-    dataIndex: 'gender',
+    title: 'Username',
+    dataIndex: 'username',
     filters: [
         { text: 'Male', value: 'male' },
         { text: 'Female', value: 'female' },
     ],
+    render: username => `${username}`,
     width: '20%',
 }, {
     title: 'Email',
@@ -23,7 +23,6 @@ const columns = [{
 
 class CustomTable extends Component {
     state = {
-        data: [],
         pagination: {},
         loading: false,
     };
@@ -43,10 +42,12 @@ class CustomTable extends Component {
     }
 
     render() {
+        const { users } = this.props;
+        // console.log(users);
         return (
             <Table columns={columns}
                 rowKey={record => record.registered}
-                dataSource={this.state.data}
+                dataSource={users}
                 pagination={this.state.pagination}
                 loading={this.state.loading}
                 onChange={this.handleTableChange}

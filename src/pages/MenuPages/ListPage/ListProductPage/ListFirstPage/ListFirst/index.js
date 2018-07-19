@@ -1,21 +1,22 @@
 import React from 'react'
-import { Collapse } from 'antd'
 import './style.scss'
-import { Button, Select, Input } from 'antd';
-// import Table from '../../../../../../components/AntComponents/Table/Ajax'
+import { Collapse, Input, Button, Select } from 'antd'
 import CustomTable from '../../../../../../components/LayoutComponents/CustomTable';
-// import reqwest from 'reqwest';
 
-const Panel = Collapse.Panel
+
 const Option = Select.Option;
-
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
-
 class ListFirst extends React.Component {
+    state = {
+        selectNumber: 10
+    }
+    handleChange = (value) => {
+        this.setState({
+            selectNumber: value
+        })
 
+    }
     render() {
+        const { users } = this.props;
         return (
             <section className="card">
                 <div className="card-header">
@@ -30,13 +31,25 @@ class ListFirst extends React.Component {
 
 
                     </div>
-                    <div className="search_input mt-2">
-                        <span className="search_title">Search: </span>
-                        <Input className="col-1" placeholder="Input keyword" />
+                    <div className="row mt-2 col-12">
+                        <div className="number_display">
+                            <span className='select_title'>Display: </span>
+                            <Select style={{ width: 120 }} value={this.state.selectNumber} name="selectNumber" onChange={this.handleChange}>
+                                <Option value="10">10</Option>
+                                <Option value="20">20</Option>
+                                <Option value="40">40</Option>
+                                <Option value="50">50</Option>
+                                <Option value="100">100</Option>
+                            </Select>
+                        </div>
+                        <div className="search_input text-center">
+                            <span className="search_title">Search: </span>
+                            <Input className="col-6" placeholder="Input keyword" />
+                        </div>
                     </div>
                 </div>
                 <div className="card-body">
-                    <CustomTable />
+                    <CustomTable users={users} />
                 </div>
             </section>
         )
