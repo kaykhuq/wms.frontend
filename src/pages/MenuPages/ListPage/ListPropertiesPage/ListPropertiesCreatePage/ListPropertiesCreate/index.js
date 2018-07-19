@@ -2,7 +2,6 @@ import React from 'react'
 import { Collapse, Tabs, Upload, message, Button, Icon, Input, Form, Select } from 'antd'
 
 import './style.scss'
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 const Panel = Collapse.Panel
 const TabPane = Tabs.TabPane;
