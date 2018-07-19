@@ -1,6 +1,6 @@
-import { Table } from 'antd';
 import React, { Component } from 'react';
-import val from './data';
+import { Button, Input, Icon, Table } from 'antd'
+import { tableData } from './data.json'
 
 const columns = [{
     title: 'Name',
@@ -21,10 +21,9 @@ const columns = [{
     dataIndex: 'email',
 }];
 
-
 class CustomTable extends Component {
     state = {
-        data: val,
+        data: [],
         pagination: {},
         loading: false,
     };
@@ -34,41 +33,15 @@ class CustomTable extends Component {
         this.setState({
             pagination: pager,
         });
-        this.fetch({
-            results: pagination.pageSize,
-            page: pagination.current,
-            sortField: sorter.field,
-            sortOrder: sorter.order,
-            ...filters,
-        });
-    }
-
-    fetch = (params = {}) => {
-        console.log('params:', params);
-        this.setState({ loading: true });
-        // reqwest({
-        //     url: 'https://randomuser.me/api',
-        //     method: 'get',
-        //     data: {
-        //         results: 10,
-        //         ...params,
-        //     },
-        //     type: 'json',
-        // }).then((data) => {
-        //     const pagination = { ...this.state.pagination };
-        //     // Read total count from server
-        //     // pagination.total = data.totalCount;
-        //     pagination.total = 200;
-        //     this.setState({
-        //         loading: false,
-        //         data: data.results,
-        //         pagination,
-        //     });
+        // this.fetch({
+        //     results: pagination.pageSize,
+        //     page: pagination.current,
+        //     sortField: sorter.field,
+        //     sortOrder: sorter.order,
+        //     ...filters,
         // });
     }
-    componentDidMount() {
-        this.fetch();
-    }
+
     render() {
         return (
             <Table columns={columns}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Collapse } from 'antd'
 import './style.scss'
-import { Button } from 'antd';
-import { Select } from 'antd';
+import { Button, Select, Input } from 'antd';
+// import Table from '../../../../../../components/AntComponents/Table/Ajax'
 import CustomTable from '../../../../../../components/LayoutComponents/CustomTable';
 // import reqwest from 'reqwest';
 
@@ -27,22 +27,15 @@ class ListFirst extends React.Component {
                                 <Button type="primary"><i className="fa fa-plus-square-o" aria-hidden="true"></i> &nbsp;Tạo Mới</Button>
                             </div>
                         </div>
-                        <div className="select_filter_number pt-2">
-                            <span className="filter_title">Hiển Thị: </span>
-                            <Select defaultValue="10" style={{ width: 120 }} onChange={handleChange}>
-                                <Option value="10">10</Option>
-                                <Option value="20">20</Option>
-                                <Option value="50">50</Option>
-                                <Option value="100">100</Option>
-                            </Select>
-                        </div>
 
+
+                    </div>
+                    <div className="search_input mt-2">
+                        <span className="search_title">Search: </span>
+                        <Input className="col-1" placeholder="Input keyword" />
                     </div>
                 </div>
                 <div className="card-body">
-                    <p>
-                        this is list first page
-          </p>
                     <CustomTable />
                 </div>
             </section>
