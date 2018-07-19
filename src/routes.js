@@ -21,23 +21,10 @@ const loadableRoutes = {
   '/empty': {
     component: loadable(() => import('pages/DefaultPages/EmptyPage')),
   },
-  // Nhan vien
-  '/employees/staff/active': {
-    component: loadable(() => import('pages/DefaultPages/EmployeesStaffActive')),
+  
+  '/forgotpassword': {
+    component: loadable(() => import('pages/DefaultPages/ForgotPassword')),
   },
-  '/employees/staff/inactive': {
-    component: loadable(() => import('pages/DefaultPages/EmployeesStaffInactive')),
-  },
-  '/employees/staff/accounts': {
-    component: loadable(() => import('pages/DefaultPages/EmployeesStaffAccounts')),
-  },
-  '/employees/staff/roles': {
-    component: loadable(() => import('pages/DefaultPages/EmployeesStaffRoles')),
-  },
-  '/employees/staff/create': {
-    component: loadable(() => import('pages/DefaultPages/EmployeesStaffCreate')),
-  },
-
   // Dashboards
   '/dashboard/alpha': {
     component: loadable(() => import('pages/Dashboard/DashboardAlphaPage')),
@@ -110,6 +97,37 @@ const loadableRoutes = {
     component: loadable(() =>
       import('pages/MenuPages/ListPage/ListProcessPage/ListProcessUnitPage'),
     ),
+  },
+  // Nhan su
+  '/employees/staff/active': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesStaffActive')),
+  },
+  '/employees/staff/inactive': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesStaffInactive')),
+  },
+  '/employees/staff/accounts': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesStaffAccounts')),
+  },
+  '/employees/staff/roles': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesStaffRoles')),
+  },
+  '/employees/staff/create': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesStaffCreate')),
+  },
+  '/employees/department/office': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesDepartmentOffice')),
+  },
+  '/employees/department/position': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesDepartmentPosition')),
+  },
+  '/employees/trucks/active': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesTrucksActive')),
+  },
+  '/employees/trucks/inactive': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesTrucksInactive')),
+  }, 
+  '/employees/trucks/create': {
+    component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesTrucksCreate')),
   },
 }
 
