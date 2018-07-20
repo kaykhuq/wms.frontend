@@ -3,12 +3,10 @@ import { routerReducer } from 'react-router-redux'
 import { pendingTasksReducer } from 'react-redux-spinner'
 import app from './app'
 import login from './login'
-import users from './users'
 
 export default combineReducers({
   routing: routerReducer,
   pendingTasks: pendingTasksReducer,
   app,
   login,
-  users
 })
