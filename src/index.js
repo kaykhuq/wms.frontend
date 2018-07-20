@@ -29,23 +29,26 @@ const router = routerMiddleware(history)
 const middlewares = [router, thunk]
 const isLogger = false
 if (isLogger && process.env.NODE_ENV === 'development') {
-  const { logger } = require('redux-logger')
-  middlewares.push(logger)
+    const { logger } = require('redux-logger')
+    middlewares.push(logger)
 }
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(...middlewares)))
+const store = createStore(
+    reducer,
+    composeWithDevTools(applyMiddleware(...middlewares))
+)
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <LocaleProvider locale={enGB}>
-        <div>
-          <Helmet titleTemplate="Clean UI - %s" />
-          <Layout />
-        </div>
-      </LocaleProvider>
-    </ConnectedRouter>
-  </Provider>,
-  document.getElementById('root'),
+    <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <LocaleProvider locale={enGB}>
+                <div>
+                    <Helmet titleTemplate="Clean UI - %s" />
+                    <Layout />
+                </div>
+            </LocaleProvider>
+        </ConnectedRouter>
+    </Provider>,
+    document.getElementById('root'),
 )
 registerServiceWorker()
 
