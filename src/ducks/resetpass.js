@@ -4,7 +4,7 @@ import { message } from 'antd'
 
 export const REDUCER = 'resetpass'
 
-export const submit = ({ email }: { email: string}) => (
+export const submit = ({ email }: { email: string }) => (
   dispatch: Function,
   getState: Function,
 ) => {

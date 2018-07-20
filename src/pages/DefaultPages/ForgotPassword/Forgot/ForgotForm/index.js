@@ -46,13 +46,14 @@ class LoginForm extends React.Component {
               ],
             })(<Input size="default" />)}
           </FormItem>
-          
+
           <div className="form-actions">
             <Button
               type="primary"
               className="width-150 mr-4"
               htmlType="submit"
-              loading={isSubmitForm}>
+              loading={isSubmitForm}
+            >
               Reset Password
             </Button>
           </div>

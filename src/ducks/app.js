@@ -136,14 +136,12 @@ export const logout = () => (dispatch, getState) => {
 export function resetpass(email, dispatch) {
   // Use Axios there to get User Auth Token with Basic Method Authentication
 
-  if (email !=='') {
-    
+  if (email !== '') {
     dispatch(push('/login'))
     notification.open({
       type: 'success',
       message: 'You have successfully reset password!',
-      description:
-        'You have successfully reset password!',
+      description: 'You have successfully reset password!',
     })
     return true
   }
@@ -153,7 +151,6 @@ export function resetpass(email, dispatch) {
 
   return false
 }
-
 
 /*-----------*/
 
