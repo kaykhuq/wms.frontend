@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
             })(<Input size="default" type="password" />)}
           </FormItem>
           <div className="mb-2">
-            <a href="javascript: void(0);" className="utils__link--blue utils__link--underlined">
+            <a href="#/forgotpassword" className="utils__link--blue utils__link--underlined">
               Forgot password
             </a>
           </div>

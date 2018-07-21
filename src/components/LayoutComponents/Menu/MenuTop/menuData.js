@@ -433,7 +433,7 @@ export default [
           },
         ],
       },
-      { 
+      {
         title: 'Xe Tải',
         key: 'trucks',
         url: '/employees/trucks',

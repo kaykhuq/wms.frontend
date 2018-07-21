@@ -16,5 +16,3 @@ class ForgotPasswordPage extends React.Component {
 }
 
 export default ForgotPasswordPage
-
-
