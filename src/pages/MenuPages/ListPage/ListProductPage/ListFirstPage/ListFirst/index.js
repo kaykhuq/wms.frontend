@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { Collapse, Input, Button, Select } from 'antd'
-import CustomTable from '../../../../../../components/LayoutComponents/CustomTable';
+import CustomTable from 'components/LayoutComponents/CustomTable';
 
 
 const Option = Select.Option;
