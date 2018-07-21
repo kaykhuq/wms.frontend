@@ -1,7 +1,7 @@
 import React from 'react'
-import { Form, Icon, Input, Button, Cascader, Tabs } from 'antd'
-import DescInput from "./DescInput";
-import UploadImage from "./UploadImage";
+import { Form, Icon, Input, Button, Cascader, Tabs,Upload, message } from 'antd'
+import DescInput from './DescInput'
+// import UploadImage from './UploadImage'
 // import { connect } from 'react-redux'
 // import { REDUCER, submit } from 'ducks/create-staff'
 
@@ -56,24 +56,49 @@ const wms_user = [
   },
 ]
 function hasErrors(fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field]);
+  return Object.keys(fieldsError).some(field => fieldsError[field])
 }
-
 
 @Form.create()
 class FormBase extends React.Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
+
+  handleSubmit = e => {
+    e.preventDefault()
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        console.log('Received values of form: ', values)
       }
-    });
+    })
   }
+  normFile = (e) => {
+    console.log('Upload event:', e);
+    if (Array.isArray(e)) {
+      return e;
+    }
+    return e && e.fileList;
+  }
+
   render() {
     const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form
     const TabPane = Tabs.TabPane
-    const { TextArea } = Input;
+    const { TextArea } = Input
+    const UploadConf= {
+      name: 'avatar',
+      action: '//jsonplaceholder.typicode.com/posts/',
+      headers: {
+        authorization: 'authorization-text',
+      },
+      onChange(info) {
+        if (info.file.status !== 'uploading') {
+          console.log(info.file, info.fileList)
+        }
+        if (info.file.status === 'done') {
+          message.success(`${info.file.name} file uploaded successfully`)
+        } else if (info.file.status === 'error') {
+          message.error(`${info.file.name} file upload failed.`)
+        }
+      },
+    }
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -186,7 +211,7 @@ class FormBase extends React.Component {
                 <FormItem {...formItemLayout} label="">
                   {getFieldDecorator('description', {
                     rules: [{ required: false, message: 'Nhập Mô Tả' }],
-                  })(<DescInput/>)}
+                  })(<DescInput />)}
                 </FormItem>
               </div>
             </TabPane>
@@ -195,12 +220,18 @@ class FormBase extends React.Component {
                 <FormItem {...formItemLayout} label="Image File">
                   {getFieldDecorator('image_file', {
                     rules: [{ required: false, message: 'Image File' }],
-                  })(<UploadImage/>)}
+                    valuePropName: 'fileList',
+                    getValueFromEvent: this.normFile,
+                  })(<Upload {...UploadConf} listType="picture">
+                        <Button>
+                          <Icon type="upload" /> Click to upload
+                        </Button>
+                      </Upload>)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Description">
                   {getFieldDecorator('desc_image', {
                     rules: [{ required: false, message: 'Nhập Description' }],
-                  })(<TextArea  rows={4} placeholder="Nhập Description"/>)}
+                  })(<TextArea rows={4} placeholder="Nhập Description" />)}
                 </FormItem>
                 <FormItem {...formItemLayout} label="Image Alt">
                   {getFieldDecorator('alt_image', {
@@ -213,20 +244,15 @@ class FormBase extends React.Component {
         </div>
         <div className="form-container">
           <FormItem className="btn-inline">
-            <Button
-              type="primary"
-              htmlType="submit"
-              disabled={hasErrors(getFieldsError())}>
+            <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}>
               Tạo
             </Button>
-        </FormItem>
-        <FormItem className="btn-inline">
-            <Button
-              type="dashed"
-              htmlType="reset">
+          </FormItem>
+          <FormItem className="btn-inline">
+            <Button type="dashed" htmlType="reset">
               Hủy
             </Button>
-        </FormItem>
+          </FormItem>
         </div>
       </Form>
     )

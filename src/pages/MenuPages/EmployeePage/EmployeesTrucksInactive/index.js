@@ -4,14 +4,12 @@ import Helmet from 'react-helmet'
 import TrucksInactive from './TrucksInactive'
 
 class EmployeesTrucksInactive extends React.Component {
-  
-
   render() {
     const props = this.props
     return (
       <Page {...props}>
         <Helmet title="Trucks Active Page" />
-        <TrucksInactive/>
+        <TrucksInactive />
       </Page>
     )
   }

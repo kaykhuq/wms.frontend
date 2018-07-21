@@ -3,8 +3,6 @@ import ForgotForm from './ForgotForm'
 import './style.scss'
 
 class Forgot extends React.Component {
-  
-
   componentDidMount() {
     document.getElementsByTagName('body')[0].style.overflow = 'hidden'
   }
@@ -31,22 +29,16 @@ class Forgot extends React.Component {
           <div className="row">
             <div className="col-xl-12">
               <div className="main-login__block__promo text-black text-center">
-                <h1 className="mb-3 text-black">
-                 
-                  Warehouse Management System
-                </h1>
-                
+                <h1 className="mb-3 text-black">Warehouse Management System</h1>
               </div>
               <div className="main-login__block__inner">
                 <div className="main-login__block__form">
                   <ForgotForm />
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
-        
       </div>
     )
   }

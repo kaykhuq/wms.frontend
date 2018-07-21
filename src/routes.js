@@ -21,7 +21,7 @@ const loadableRoutes = {
   '/empty': {
     component: loadable(() => import('pages/DefaultPages/EmptyPage')),
   },
-  
+
   '/forgotpassword': {
     component: loadable(() => import('pages/DefaultPages/ForgotPassword')),
   },
@@ -125,9 +125,25 @@ const loadableRoutes = {
   },
   '/employees/trucks/inactive': {
     component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesTrucksInactive')),
-  }, 
+  },
   '/employees/trucks/create': {
     component: loadable(() => import('pages/MenuPages/EmployeePage/EmployeesTrucksCreate')),
+  },
+
+
+  //Admin
+
+  '/admin/users/create': {
+    component: loadable(() => import('pages/Admin/Users/Create')),
+  },
+  '/admin/roles/create': {
+    component: loadable(() => import('pages/Admin/Roles/Create')),
+  },
+  '/admin/department/create': {
+    component: loadable(() => import('pages/Admin/Department/Create')),
+  }, 
+  '/admin/employee-title/create': {
+    component: loadable(() => import('pages/Admin/EmployeeTitle/Create')),
   },
 }
 

@@ -13,14 +13,14 @@ class TrucksActive extends React.Component {
         <div className="staff-header">
           <div className="staff__title">
             <div className="staff__title_container">
-              <icon className="icmn icmn-user-check" />
+              <i className="icmn icmn-user-check" />
             </div>
             <strong>Danh Sách Xe Tải Đang Hoạt Động</strong>
           </div>
 
           <div className="staff-header-btn btn primary">
-            <a href="javascript: void(0);">
-              <i class="fa fa-plus-square-o" aria-hidden="true" />
+            <a href="#/employees/trucks/create">
+              <i className="fa fa-plus-square-o" aria-hidden="true" />
               <span> Tạo Mới</span>
             </a>
           </div>
