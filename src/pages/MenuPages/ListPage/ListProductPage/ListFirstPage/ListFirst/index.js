@@ -27,7 +27,7 @@ class ListFirst extends React.Component {
 
                             <div className="staff-header-btn btn primary">
                                 <a href="javascript: void(0);">
-                                    <i class="fa fa-plus-square-o" aria-hidden="true" />
+                                    <i className="fa fa-plus-square-o" aria-hidden="true" />
                                     <span> Tạo Mới</span>
                                 </a>
                             </div>
