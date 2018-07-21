@@ -1,0 +1,14 @@
+.tool_bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+@media (min-width:1200px){
+    .alert.alert-info{
+        max-width: 1400px;
+    }
+}
+.search_input .ant-input{
+    width: 400px;
+}

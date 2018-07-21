@@ -4,22 +4,31 @@ import { Button, Input, Icon, Table } from 'antd'
 const columns = [{
     title: 'Name',
     dataIndex: 'name',
-    sorter: true,
+    // sorter: true,
     render: name => `${name}`,
     width: '20%',
+    onFilter: (value, record) => record.name.indexOf(value) === 0,
+    sorter: (a, b) => a.name.length - b.name.length,
 }, {
     title: 'Username',
     dataIndex: 'username',
     filters: [
-        { text: 'Male', value: 'male' },
-        { text: 'Female', value: 'female' },
+        { text: 'Username', value: 'username' },
     ],
     render: username => `${username}`,
     width: '20%',
+    onFilter: (value, record) => record.username.indexOf(value) === 0,
+    sorter: (a, b) => a.username.length - b.username.length,
 }, {
     title: 'Email',
     dataIndex: 'email',
-}];
+    onFilter: (value, record) => record.email.indexOf(value) === 0,
+    sorter: (a, b) => a.email.length - b.email.length,
+},
+
+
+
+];
 
 class CustomTable extends Component {
     state = {

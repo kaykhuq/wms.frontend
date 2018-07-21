@@ -1,27 +1,18 @@
 import React from 'react'
-import { Collapse, Tabs, Upload, message, Button, Icon, Input, Form, Select } from 'antd'
+import { Collapse, Tabs, message, Button, Input, Form, Select } from 'antd'
 
 import './style.scss'
+import UploadImage from './UploadImage/index';
+import DescInput from 'components/LayoutComponents/DescInput/index';
 
 const Panel = Collapse.Panel
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item
 const Option = Select.Option;
 
-const types = [{
-    value: '0',
-    label: 'Chọn loại',
-}, {
-    value: '1',
-    label: 'text',
-}, {
-    value: '2',
-    label: 'Datetime',
-}, {
-    value: '3',
-    label: 'Number',
-
-}];
+function hasErrors(fieldsError) {
+    return Object.keys(fieldsError).some(field => fieldsError[field]);
+}
 @Form.create()
 
 class ListPropertiesCreate extends React.Component {
@@ -40,82 +31,91 @@ class ListPropertiesCreate extends React.Component {
         }
     }
     render() {
-        const props = this.props;
-        const { getFieldDecorator, getFieldsError, getFieldError, isFieldTouched } = this.props.form;
+        const { getFieldDecorator, getFieldsError } = this.props.form;
         const formItemLayout = {
             labelCol: {
-              xs: { span: 24 },
-              sm: { span: 8 },
+                xs: { span: 24 },
+                sm: { span: 8 },
             },
             wrapperCol: {
-              xs: { span: 24 },
-              sm: { span: 16 },
+                xs: { span: 24 },
+                sm: { span: 16 },
             },
-          };
+        };
         return (
             <Form layout="vertical" hideRequiredMark onSubmit={this.onSubmit}>
                 <Tabs type="card">
                     <TabPane tab="Thông Tin Cơ Bản" key="1">
-                        <FormItem label="Tên:"
-                            {...formItemLayout}
-
-                        >
-                            {getFieldDecorator('name', {
-                                rules: [
-                                    { required: true, message: 'Nhập tên' },
-                                ],
-                            })(<Input placeholder="Nhập tên" />)}
-                        </FormItem>
-                        <FormItem
-                            label="Loại"
-                            {...formItemLayout}
-                        >
-                            {getFieldDecorator('loại', {
-                                rules: [{ required: true, message: 'Chọn loại' }],
-                            })(
-                                <Select
-                                    placeholder="Chọn loại"
-                                    onChange={this.handleSelectChange}
-                                >
-                                    <Option value="text">text</Option>
-                                    <Option value="Datetime">Datetime</Option>
-                                    <Option value="Number">Number</Option>
-                                </Select>
-                            )}
-                        </FormItem>
-                        <div className="form-actions">
-                            <Button type="primary" className="" htmlType="submit">Tạo </Button>&nbsp;
-                            <Button className="" htmlType="button">Hủy</Button>
+                        <div className="form-container">
+                            <FormItem label="Tên:"
+                                {...formItemLayout}
+                            >
+                                {getFieldDecorator('name', {
+                                    rules: [
+                                        { required: true, message: 'Nhập tên' },
+                                    ],
+                                })(<Input placeholder="Nhập tên" />)}
+                            </FormItem>
+                            <FormItem
+                                label="Loại"
+                                {...formItemLayout}
+                            >
+                                {getFieldDecorator('loại', {
+                                    rules: [{ required: true, message: 'Chọn loại' }],
+                                })(
+                                    <Select
+                                        placeholder="Chọn loại"
+                                        onChange={this.handleSelectChange}
+                                    >
+                                        <Option value="text">text</Option>
+                                        <Option value="Datetime">Datetime</Option>
+                                        <Option value="Number">Number</Option>
+                                    </Select>
+                                )}
+                            </FormItem>
                         </div>
                     </TabPane>
                     <TabPane tab="Mô Tả" key="2">
-                        <FormItem>
-                            {/* <Editor
-                                editorState={editorState}
-                                toolbarClassName="toolbarClassName"
-                                wrapperClassName="wrapperClassName"
-                                editorClassName="editorClassName"
-                                onEditorStateChange={this.onEditorStateChange}
-                            /> */}
-                        </FormItem>
+                        <div className="form-container">
+                            <FormItem {...formItemLayout} label="">
+                                {getFieldDecorator('description', {
+                                    rules: [{ required: false, message: 'Nhập Mô Tả' }],
+                                })(<DescInput />)}
+                            </FormItem>
+                        </div>
                     </TabPane>
                     <TabPane tab="Media" key="3">
-                        <FormItem>
-                            <div className="tab_Media">
-                                <span className="upload_title mb-2">Image File: </span>
-                                <Upload {...props}>
-                                    <Button>
-                                        <Icon type="upload" /> Click to Upload
-                        </Button>
-                                </Upload>
-                                <div className="img_alt mt-3">
-                                    <span className="upload_alt">Image Alt: </span>
-                                    <Input placeholder="alt text" className="upload_alt_input col-10" />
-                                </div>
-                            </div>
-                        </FormItem>
+                        <div className="form-container">
+                            <FormItem {...formItemLayout} label="Image File">
+                                {getFieldDecorator('image_file', {
+                                    rules: [{ required: false, message: 'Image File' }],
+                                })(<UploadImage />)}
+                            </FormItem>
+                            <FormItem {...formItemLayout} label="Image Alt">
+                                {getFieldDecorator('alt_image', {
+                                    rules: [{ required: false, message: 'Nhập Image Alt' }],
+                                })(<Input placeholder="Nhập Image Alt" />)}
+                            </FormItem>
+                        </div>
                     </TabPane>
                 </Tabs>
+                <div className="form-container">
+                    <FormItem className="btn-inline">
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            disabled={hasErrors(getFieldsError())}>
+                            Tạo
+                        </Button>
+                    </FormItem>
+                    <FormItem className="btn-inline">
+                        <Button
+                            type="dashed"
+                            htmlType="reset">
+                            Hủy
+                        </Button>
+                    </FormItem>
+                </div>
             </Form>
         )
     }

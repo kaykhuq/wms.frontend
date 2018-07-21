@@ -2,6 +2,8 @@ import { createAction, createReducer } from 'redux-act'
 import { push } from 'react-router-redux'
 import { pendingTask, begin, end } from 'react-redux-spinner'
 import { notification } from 'antd'
+import callApi from './apiCaller';
+
 
 const REDUCER = 'app'
 const NS = `@@${REDUCER}/`
@@ -17,6 +19,9 @@ export const deleteDialogForm = createAction(`${NS}DELETE_DIALOG_FORM`)
 export const addSubmitForm = createAction(`${NS}ADD_SUBMIT_FORM`)
 export const deleteSubmitForm = createAction(`${NS}DELETE_SUBMIT_FORM`)
 export const setLayoutState = createAction(`${NS}SET_LAYOUT_STATE`)
+export const fetchAllUsers = createAction(`${NS}FETCH_ALL_USER`)
+
+
 
 export const setLoading = isLoading => {
   const action = _setLoading(isLoading)
@@ -163,6 +168,7 @@ const initialState = {
   dialogForms: {},
   submitForms: {},
   isHideLogin: false,
+  users: [],
 
   // LAYOUT STATE
   layoutState: {
@@ -219,6 +225,7 @@ export default createReducer(
       delete submitForms[id]
       return { ...state, submitForms }
     },
+    [fetchAllUsers]:(state,users)=> ({...state,users})
   },
   initialState,
 )

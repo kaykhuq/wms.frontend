@@ -40,7 +40,7 @@ const loadableRoutes = {
     component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerActivePage')),
   },
   '/customer/deactive': {
-    component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerActivePage')),
+    component: loadable(() => import('pages/MenuPages/CustomerPage/CustomerDeactivePage')),
   },
 
   // Menu Nha Cung Cap
